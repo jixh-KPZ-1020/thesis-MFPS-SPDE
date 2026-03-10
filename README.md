@@ -6,9 +6,8 @@ Doctoral thesis by Xiaohao Ji — Institut für Mathematik, Freie Universität B
 
 ## Topics
 
-- Dean–Kawasaki equation and large deviations
+- Dean–Kawasaki equation, weak error and large deviations
 - Anderson nonlinear Schrödinger equation and Bose–Einstein condensation
-- Langevin dynamics on manifolds (S²)
 
 ## Reproducing Figures
 
