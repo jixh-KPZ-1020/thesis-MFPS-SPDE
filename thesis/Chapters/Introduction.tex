@@ -64,7 +64,7 @@ M{\'e}zard, Parisi, and Virasoro~\cite{mezard1987spinGlass}. The key order param
     \label{fig:sk_pq_distribution}
 \end{figure}
 
-On the other hand, the mathematical concept of propagation of chaos was refined through the nonlinear Markov process framework of McKean~\cite{mckean1966class} after the foundational work by Kac, who introduced what are now known as McKean--Vlasov stochastic differential equations, whose ``coefficients depend on the distribution of the process itself''. They were further developed into a general theory by Sznitman~\cite{sznitman1991topics}. In this setting, empirical measures of $N$--particle systems converge to solutions of nonlinear Fokker--Planck equations, and quantitative versions of propagation of chaos provide explicit convergence rates under Lipschitz or monotone interaction assumptions.\\
+On the other hand, the mathematical concept of propagation of chaos was refined through the nonlinear Markov process framework of McKean~\cite{mckean1966class} after the foundational work by Kac, who introduced what are now known as Vlasov--Mckean stochastic differential equations, whose ``coefficients depend on the distribution of the process itself''. They were further developed into a general theory by Sznitman~\cite{sznitman1991topics}. In this setting, empirical measures of $N$--particle systems converge to solutions of nonlinear Fokker--Planck equations, and quantitative versions of propagation of chaos provide explicit convergence rates under Lipschitz or monotone interaction assumptions.\\
 
 Due to the singularity of the interactions that are physically relevant, e.g. Coulomb or Riesz potentials, the rigorous justification of the mean--field limit PDE together with its corresponding particle systems has only been achieved by the works of Serfaty, Jabin--Wang and others. The modulated energy was introduced by Serfaty \cite{S20}, whose dynamic was monitored via a Grönwall--type inequality. The technique was later combined with the relative entropy method by Jabin, Wang and Bresch \cite{JW18,BJW19} to quantify the mean--field limit for a general class of singular kernels including the Biot--Savart law and Patlak--Keller--Segel kernel. We refer the readers to \cite{serfaty2024lecturescoulombrieszgases} for a comprehensive overview on related topics in classical mechanics.
 
@@ -322,15 +322,15 @@ where $\mu$ denotes the evolution of the probability measure, as part of the dif
 \label{fig:intro_FDR}
 \end{figure}
 
-With the geometric intuition, we formally derive the Dean--Kawasaki equation~\eqref{eq:reduced-DK-main}, which corresponds to the particle system according to the FDR by setting the external potential $V= 0$ in \eqref{eq:FKP-general} and the stochastic integration is chosen to be Stratonovich respecting the underlying geometry. In this case the invariant measure $\mu^{\mathrm{inv}}$ of \eqref{eq:reduced-DK-main} is formally given by the Gibbs one, which formally has the density with respect to the ``Lebesgue measure'' on the Wasserstein space
+With the geometric intuition, we formally derive the Dean--Kawasaki equation~\eqref{eq:reduced-DK-main}, which corresponds to the particle system according to the FDR by setting the external potential $V= 0$ in \eqref{eq:FKP-general} and the stochastic integration is chosen to be Stratonovich respecting the underlying geometry. We still believe that the invariant measure $\mu^{\mathrm{inv}}$ of \eqref{eq:reduced-DK-main} is formally given by the Gibbs one, which formally has the density with respect to the ``Lebesgue measure'' on the Wasserstein space
 \begin{align*}
 \mu^{\mathrm{inv}}(\mathrm{d}\rho) \propto \mathrm{exp}\left(\frac{-N\mathcal{F}[\rho]}{2}\right) \text{``$\mathrm{d}\rho$''}, 
 \end{align*}
-as the noise term in \eqref{eq:reduced-DK-main} can be interpreted as $(2\beta^{-1})^{1/2}M^{1/2}[\rho]\circ \mathrm{d}W$ with inverse temperature $\beta = N/2$, and the mobility is given by the inverse Riemannian tensor $M[\rho] = - \nabla \cdot [\rho \nabla (\cdot)]$. With all the observations above combined, \eqref{eq:reduced-DK-main} with Stratonovich noise is exactly designed to respect the fluctuation--dissipation relation together with the prescribed free energy and the Wasserstein geometry. \\
+as the noise term in \eqref{eq:reduced-DK-main} can be interpreted as $(2\beta^{-1})^{1/2}M^{1/2}[\rho]\circ \mathrm{d}W$ with inverse temperature $\beta = N/2$, and the mobility is given by the formal inverse Riemannian tensor $M[\rho] = - \nabla \cdot [\rho \nabla (\cdot)]$. With all the observations above combined, \eqref{eq:reduced-DK-main} with Stratonovich noise is exactly designed to respect the fluctuation--dissipation relation together with the prescribed free energy and the Wasserstein geometry. \\
 
 Despite the choice of Stratonovich integrations in the thermal noises motivated from the geometric interpretation, the original idea of Kawasaki and Dean \cite{K73, D96} suggests using the It\^o integration instead. The latter can be explained using elementary stochastic analysis, as we will do next.\\
 
-We consider the general weakly interacting particle system of Mckean--Vlasov type given by the following SDE system:
+We consider the general weakly interacting particle system of Vlasov--Mckean type given by the following SDE system:
 \begin{align}\label{eq:def-IPS}
 \mathrm{d}X^i_t = b(X_t^i, {\rho}_{X_t})\mathrm{d}t +\sqrt{2}\Sigma(X_t^i, {\rho}_{X_t})\cdot \mathrm{d}W^i_t, 
 \end{align}
@@ -362,7 +362,7 @@ so the above calculation suggests that $\rho_{X_t}$ is a solution to the followi
 \mathrm{d}\rho^N_t =  \nabla^2 : \big[a(\cdot, \rho^N_t) \rho^N_t\big]\mathrm{d}t & - \nabla \cdot \big[ b(\cdot, \rho^N_t) \rho^N_t \big]\mathrm{d}t\\ & + \frac{\sqrt{2}}{\sqrt{N}}\nabla \cdot\big[(\rho^N_t)^{\frac{1}{2}} \Sigma (\cdot, \rho^N_t) \cdot \mathrm{d}W_t\big],
 \end{split}
 \end{equation}
-where $(W_t)_{t \geq 0}$ is the $d$-dimensional real cylindrical Wiener process on $L^2(\mathbb{T}^d)$, that is the time integral of the space-time white noise. It is also not hard to see that \eqref{eq:DK_full} is a nonlinear generalization of \eqref{eq:reduced-DK-main} if we neglect the difference of the stochastic integrations.\\
+where $(W_t)_{t \geq 0}$ is the $d$-dimensional real cylindrical Wiener process on $L^2(\mathbb{T}^d)$, that is the time integral of the space-time white noise. It is also not hard to see that \eqref{eq:DK_full} is a fully nonlinear generalization of \eqref{eq:reduced-DK-main} if we neglect the difference of the stochastic integrations.\\
 
 As for stochastic transport equations~\cite{Kunita1990} we could then hope to solve \eqref{eq:DK_full} with absolutely continuous initial condition to obtain a description of the flow of particles without resolving individual particles.  However, this is impossible for at least a large class of \eqref{eq:DK_full} by the triviality result from \cite{KLvR19,KLvR20}, which says that~\eqref{eq:DK_full} is a tautologic description of the original particle system which does not allow for any simplification or model reduction. Therefore, we follow \cite{FG21,DKP23} in considering a regularized version of \eqref{eq:DK_full}, 
 \begin{equation}\label{eq:DK_reg-intro}

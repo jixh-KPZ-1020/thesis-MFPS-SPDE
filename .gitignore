@@ -29,3 +29,6 @@ thesis/**/*.brf
 thesis/**/*.synctex.gz
 thesis/**/*.fls
 thesis/**/*.fdb_latexmk
+
+# vscode
+.vscode/
